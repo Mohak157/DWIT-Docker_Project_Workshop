@@ -21,7 +21,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker buildx build -t ${{ secrets.DOCKERHUB_USERNAME }}/nodeapp:latest --load .
+          docker buildx build --load -t ${{ secrets.DOCKERHUB_USERNAME }}/nodeapp:latest .
 
       - name: Push Docker image
         run: |
